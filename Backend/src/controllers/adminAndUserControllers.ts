@@ -82,12 +82,12 @@ export const login: RequestHandler = async (req, res, next) => {
     // Generating tokens
     const authToken = jwt.sign(
       { userId: user._id },
-      process.env.JWT_SECRET_KEY || " ",
+      process.env.JWT_SECRET_TOKEN || " ",
       { expiresIn: "30m" }
     );
     const refreshToken = jwt.sign(
       { userId: user._id },
-      process.env.JWT_REFRESH_SECRET_KEY || " ",
+      process.env.JWT_REFRESH_SECRET_TOKEN || " ",
       { expiresIn: "2h" }
     );
 
