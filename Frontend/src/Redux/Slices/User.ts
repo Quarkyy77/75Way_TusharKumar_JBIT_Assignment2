@@ -9,13 +9,7 @@ interface UserData {
     username: string;
     email: string;
     password: string;
-    wallet: number;
-    transition: {
-      id: string;
-      amount: number;
-      timestamp: string;
-    }[];
-    __v: number;
+ 
   }
   
   // Define the interface for the response object
@@ -31,11 +25,6 @@ const initialState: UserResponse = {
       username: "",
       email: "",
       password: "",
-      wallet: 0,
-      transition: [],
-      __v: 0
-    },
-    accessToken: accessToken
   };
 
  const authUser = createSlice({
